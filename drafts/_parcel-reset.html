@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Parcel: Reset</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h2,
+            .cs-title {
+                font-size: 1.25rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h3,
+            .cs-section {
+                font-size: 1rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h4,
+            .cs-sub-section {
+                font-size: 1rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            li {
+                margin-bottom: 1em;
+                /* list-style: inside; */
+            }
+
+            p {
+                margin-bottom: 0.5em;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+
+            code {
+                margin: 0.5em;
+                display: block;
+                font-family: "Courier New", Courier, monospace;
+                font-weight: 100;
+                background-color: #f5f5f5;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Parcel: Reset</h2>
+        <p>
+            You can manually delete the .parcel-cache folder in your project
+            directory to clear the cache. The .parcel-cache folder stores cached
+            data used by Parcel during the build process. By deleting it, Parcel
+            will regenerate the cache when you run the build or start commands
+            again.
+        </p>
+        <p>To delete the .parcel-cache folder, follow these steps:</p>
+        <p>Close the current running Parcel server, if any.</p>
+        <p>
+            Navigate to your project directory using the terminal or file
+            explorer.
+        </p>
+        <p>
+            Locate the .parcel-cache folder, which is typically located in the
+            root of your project directory.
+        </p>
+        <p>
+            Delete the .parcel-cache folder. You can do this manually using your
+            file explorer or use the terminal with the following command:
+        </p>
+        <code> rm -rf .parcel-cache </code>
+        <p>If you're on Windows, you can use the rmdir command:</p>
+        <code> rmdir /s /q .parcel-cache </code>
+        <p>
+            After deleting the .parcel-cache folder, you can try running the npm
+            run start command again to see if the issue is resolved.
+        </p>
+        <p>
+            Manually deleting the .parcel-cache folder should not cause any
+            issues, as Parcel will recreate it as needed during the build
+            process.
+        </p>
+    </body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>General: Error Handling</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h2,
+            .cs-title {
+                font-size: 1.25rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h3,
+            .cs-section {
+                font-size: 1rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h4,
+            .cs-sub-section {
+                font-size: 1rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            li {
+                margin-bottom: 1em;
+                /* list-style: inside; */
+            }
+
+            p {
+                margin-bottom: 0.5em;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+
+            code {
+                margin: 0.5em;
+                display: block;
+                font-family: "Courier New", Courier, monospace;
+                font-weight: 100;
+                background-color: #f5f5f5;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>General: Error Handling</h2>
+        <p>
+            Proper error handling is crucial to ensure that your application
+            behaves predictably and provides useful feedback, even when
+            unexpected scenarios occur.
+        </p>
+        <p>
+            Here are some specific areas in your code that could benefit from
+            improved error handling:
+        </p>
+        <h3>DOM Element References:</h3>
+        <p>
+            When querying for DOM elements, there's a chance that an element
+            might not be found (e.g., if there's a typo in the ID or class name,
+            or if the HTML structure changes). For instance:
+        </p>
+        <code>
+            const newItemInputNode = document.getElementById('newItemInput');
+        </code>
+        <p>
+            Before using newItemInputNode, you might want to check if it's not
+            null:
+            <code>
+                if (!newItemInputNode) { console.error("Couldn't find the input
+                element with ID 'newItemInput'"); return; }
+            </code>
+        </p>
+        <h3>Event Handlers:</h3>
+        <p>
+            Event handlers can sometimes be sources of unexpected behavior,
+            especially when making assumptions about the event object or the
+            state of the application. Consider wrapping the body of event
+            handlers in try/catch to capture any unforeseen issues:
+        </p>
+        <code>
+            function handleSomeEvent(event) { try { // ... event handling logic
+            } catch (error) { console.error("Error handling the event:", error);
+            } }
+        </code>
+        <h3>Array or Object Manipulations:</h3>
+        <p>
+            When accessing properties on objects or manipulating arrays, ensure
+            you check for existence or length before proceeding. For instance,
+            before accessing someArray[0], you might check if someArray.length >
+            0.
+        </p>
+        <h3>Feedback to Users:</h3>
+        <p>
+            While logging errors to the console is useful during development,
+            end users will likely not check the console. Consider providing
+            feedback to users when errors occur, either via alerts, UI
+            notifications, or other visual cues.
+        </p>
+        <h3>External Libraries or APIs:</h3>
+        <p>
+            If you integrate external libraries or APIs in the future, ensure
+            you handle potential failures or inconsistencies in their behavior.
+        </p>
+        <h3>Asynchronous Operations:</h3>
+        <p>
+            For asynchronous operations, especially promises, ensure you handle
+            both the success and failure cases. The .catch() method on promises
+            or the catch block for async/await is crucial.
+        </p>
+    </body>
+</html>

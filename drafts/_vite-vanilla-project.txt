@@ -1,0 +1,60 @@
+components.
+
+Creating a New Vite Vanilla Project
+Open Terminal: Launch your command line interface.
+
+Create the Project:
+Use the Vite command to create a new project. Replace my-vanilla-project with your desired project name.
+
+bash
+Copy code
+npm create vite@latest my-vanilla-project -- --template vanilla
+Navigate to the Project Directory:
+
+bash
+Copy code
+cd my-vanilla-project
+Install Dependencies:
+Even if you're starting with a simple setup, it's a good idea to run npm install to set up the node_modules directory.
+
+bash
+Copy code
+npm install
+Start the Development Server:
+To see your project in action and take advantage of Vite's hot module replacement and other development features:
+
+bash
+Copy code
+npm run dev
+Suggested src Folder Structure
+Given that you'll be using custom fonts, 3D models, images, and common components, here's a suggested structure for your src folder:
+
+graphql
+Copy code
+src/
+│
+├── assets/                 # Static assets
+│   ├── fonts/              # Custom fonts
+│   ├── images/             # Images
+│   └── models/             # 3D models
+│
+├── styles/                 # CSS files
+│   ├── common.css          # Common styles
+│   └── ...                 # Other CSS files
+│
+├── components/             # Reusable components
+│   ├── Button.js           # Button component
+│   ├── Card.js             # Card component
+│   └── ...                 # Other components
+│
+├── utils/                  # Utility functions (if needed)
+│
+└── main.js                 # Main JavaScript file (entry point)
+Notes:
+
+Assets: Store fonts, images, and 3D models in the assets folder. This separation makes it easier to manage and reference these resources in your CSS and JavaScript files.
+Styles: Keep your CSS files in the styles folder. You might have a common.css for shared styles and additional CSS files for specific parts of your site.
+Components: For JavaScript files that represent reusable components (like buttons, cards, etc.), the components folder is an organized way to store them.
+Utility Functions: If you have JavaScript functions that are used in multiple places, they can be organized under the utils folder.
+Main.js: This is the entry point of your application. It's where you can import your components and styles, and it's linked from your index.html.
+This structure keeps your project organized and scalable, making it easier to maintain and expand as your project grows. Remember, you can always adjust the structure to better fit the specific needs of your project.

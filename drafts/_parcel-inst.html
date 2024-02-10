@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Parcel: Installing and Running Parcel in Project Directory
+        </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 1em;
+            }
+            h1 {
+                color: #333;
+            }
+            ol {
+                list-style-type: decimal;
+                padding-left: 20px;
+            }
+            .container {
+                margin: 1em auto;
+                padding: 1em;
+                max-width: 600px;
+                background-color: aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Parcel: Installing and Running Parcel in Project Directory</h2>
+            <ol>
+                <li>
+                    <strong>Step 1: Initialize an npm project</strong>
+                    <p>
+                        Open your terminal or command prompt and navigate to
+                        your project directory:
+                    </p>
+                    <pre><code>cd /path/to/your/project</code></pre>
+                    <p>
+                        Run the following command to initialize a new npm
+                        project:
+                    </p>
+                    <pre><code>npm init -y</code></pre>
+                </li>
+
+                <li>
+                    <strong
+                        >Step 2: Install Parcel as a development
+                        dependency</strong
+                    >
+                    <p>
+                        After navigating to your project directory, install
+                        Parcel by running the following command:
+                    </p>
+                    <pre><code>npm install parcel-bundler --save-dev</code></pre>
+                </li>
+
+                <li>
+                    <strong>Step 3: Create project files</strong>
+                    <p>
+                        Create an HTML file (e.g., <code>index.html</code>) in
+                        your project directory. Add your HTML, CSS, and
+                        JavaScript code to the appropriate files.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Step 4: Configure package.json</strong>
+                    <p>
+                        Open the <code>package.json</code> file in a text
+                        editor. Add the following line to the
+                        <code>scripts</code> section:
+                    </p>
+                    <pre><code>"build": "parcel build src/index.html"</code></pre>
+                </li>
+
+                <li>
+                    <strong>Step 5: Start the Parcel server</strong>
+                    <p>
+                        To start the Parcel server and bundle your project
+                        files, use the following command:
+                    </p>
+                    <pre><code>npx parcel src/index.html</code></pre>
+                    <p>
+                        Replace <code>src/index.html</code> with the path to
+                        your entry HTML file if it's located in a different
+                        directory.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Step 6: View your project</strong>
+                    <p>
+                        The server will start, and you should see output
+                        indicating the server is running at
+                        <code>http://localhost:1234</code> (or a different port
+                        if 1234 is already in use). Open your web browser and
+                        visit the URL to see your project running.
+                    </p>
+                </li>
+            </ol>
+
+            <p>
+                Remember to stop the server when you're done by pressing "Ctrl +
+                C" in the terminal or command prompt.
+            </p>
+        </div>
+    </body>
+</html>

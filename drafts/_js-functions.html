@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript: Function Types</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h2,
+            .cs-title {
+                font-size: 1.25rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h3,
+            .cs-section {
+                font-size: 1rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h4,
+            .cs-sub-section {
+                font-size: 1rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            li {
+                margin-bottom: 1em;
+                /* list-style: inside; */
+            }
+
+            p {
+                margin-bottom: 0.5em;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+
+            code {
+                margin: 0.5em;
+                display: block;
+                font-family: "Courier New", Courier, monospace;
+                font-weight: 100;
+                background-color: #f5f5f5;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>JavaScript: Function Types</h2>
+        <p>
+            In JavaScript, functions are blocks of code that can be defined and
+            executed when called upon. They are used to perform specific tasks
+            or calculations and are an essential part of the language. The
+            syntax of JavaScript functions consists of three main parts:
+        </p>
+        <h3>Function Declaration:</h3>
+        <p>
+            The most common and traditional way to define a function is using
+            the function declaration. It has the following syntax:
+        </p>
+        <code
+            >function functionName(parameters) {<br />
+            // Function body (code block)<br />
+            // This is where the function&#x27;s logic resides<br />
+            // It performs the desired operations when the function is called<br />
+            return someValue; // Optional, used to return a result<br />
+            }</code
+        >
+        <p>Example:</p>
+        <code
+            >function add(a, b) {<br />
+            return a + b;<br />
+            }</code
+        >
+        <h3>Function Expression:</h3>
+        <p>
+            In JavaScript, functions are also treated as first-class objects,
+            which means they can be assigned to variables. This is known as a
+            function expression. It has the following syntax:
+        </p>
+        <code>
+            const functionName = function(parameters) {<br />
+            // Function body (code block)<br />
+            return someValue; // Optional, used to return a result<br />
+            };
+        </code>
+        <p>Example:</p>
+        <code>
+            const subtract = function(a, b) {<br />
+            return a - b;<br />
+            };<br />
+        </code>
+        <h3>Arrow Function Expression:</h3>
+        <p>
+            Introduced in ECMAScript 6 (ES6), arrow functions provide a more
+            concise syntax for defining functions, especially when the function
+            is short. They also have some differences in how they handle the
+            <strong>'this'</strong> keyword compared to regular functions. The
+            syntax for an arrow function is as follows:
+        </p>
+        <code>
+            const functionName = (parameters) =&gt; {<br />
+            // Function body (code block)<br />
+            return someValue; // Optional, used to return a result<br />
+            };<br />
+        </code>
+        <p>Example:</p>
+        <code>
+            const multiply = (a, b) =&gt; {<br />
+            return a \* b;<br />
+            };<br />
+        </code>
+        <h3>Differences between these three methods:</h3>
+        <strong>Hoisting:</strong>
+        <p>
+            Function declarations are hoisted, meaning you can call them before
+            their actual definition in the code.
+        </p>
+        <p>
+            Function expressions and arrow functions are not hoisted, so you
+            must define them before calling.
+        </p>
+        <strong>'this' context:</strong>
+        <p>
+            In regular function declarations and expressions, the value of
+            <strong>'this'</strong> is dynamically determined based on how the
+            function is called. It can vary depending on the context.
+        </p>
+        <p>
+            In arrow functions, <strong>'this'</strong> is lexically scoped,
+            which means it takes the value of <strong>'this'</strong> from its
+            enclosing function or scope.
+        </p>
+        <strong>Syntax length:</strong>
+        <p>
+            Arrow functions provide a more concise syntax, especially for
+            one-liner functions.
+        </p>
+        <p>
+            Which method to use depends on the situation. Function declarations
+            are generally used for named functions, whereas function expressions
+            and arrow functions are often used for anonymous functions or when
+            you need to pass functions as arguments to other functions (e.g., in
+            higher-order functions).
+        </p>
+        <h3>Differences:</h3>
+        <p>
+            The main difference lies in when you define the function in your
+            code:
+        </p>
+        <h3>Function Declaration:</h3>
+        <p>
+            Function declarations are hoisted, which means they are available
+            throughout the scope they are defined in, even before the actual
+            declaration in the code.
+        </p>
+        <p>
+            You can call a function declared using the function keyword at any
+            point in your code, even before the line where the function is
+            declared.
+        </p>
+        <p>Example:</p>
+        <code>
+            // Calling the &#x27;add&#x27; function before its declaration<br />
+            const result = add(5, 10);<br />
+            console.log(result); // Output: 15<br />
+            <br />
+            // Function declaration<br />
+            function add(a, b) {<br />
+            return a + b;<br />
+            }
+        </code>
+        <h3>Function Expression:</h3>
+        <p>
+            Function expressions are not hoisted, so you need to define them
+            before calling them.
+        </p>
+        <p>
+            If you try to call an expressed function before its definition, you
+            will get an error.
+        </p>
+        <p>Example:</p>
+        <code>
+            // This will cause an error: &quot;TypeError: subtract is not a
+            function&quot;<br />
+            const result = subtract(10, 5);<br />
+            <br />
+            // Function expression<br />
+            const subtract = function(a, b) {<br />
+            return a - b;<br />
+            };
+        </code>
+        <p>
+            To avoid errors with function expressions, make sure you define the
+            function before you attempt to call it.
+        </p>
+        <h3>Arrow Function Expression:</h3>
+        <p>
+            Like function expressions, arrow functions are also not hoisted, so
+            they should be defined before calling.
+        </p>
+        <p>
+            The same rule applies here: define the arrow function before calling
+            it.
+        </p>
+        <p>Example:</p>
+        <code>
+            // This will cause an error: &quot;TypeError: multiply is not a
+            function&quot; <br />
+            const result = multiply(2, 3);<br />
+            // Arrow function expression<br />
+            const multiply = (a, b) =&gt; {<br />
+            return a \* b;<br />
+            };
+        </code>
+        <p>
+            So, the importance of expressing a function before calling it
+            applies to both function expressions and arrow functions, as you
+            need to ensure the function is defined and available in memory at
+            the time of the call.
+        </p>
+    </body>
+</html>

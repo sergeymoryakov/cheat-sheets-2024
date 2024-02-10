@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Git: Useful Commands</title>
+    </head>
+    <body>
+        <h2>Git: Useful Commands</h2>
+        <ul>
+            <li>
+                <h2>To display your Git configurations (name and email):</h2>
+                <code>git config --global --list</code>
+                <p>
+                    This command will list all the global configurations set in
+                    Git.
+                </p>
+            </li>
+            <li>
+                <h2>To display your Git username:</h2>
+                <code>git config user.name</code>
+                <p>Running this command will show your configured username.</p>
+            </li>
+            <li>
+                <h2>To display your Git email:</h2>
+                <code>git config user.email</code>
+                <p>
+                    This command will display the email address you've
+                    configured.
+                </p>
+            </li>
+            <li>
+                <h2>To display your SSH key fingerprint:</h2>
+                <code>ssh-keygen -lf ~/.ssh/id_rsa.pub</code>
+                <p>
+                    This command will show the fingerprint of your SSH key. It
+                    can be useful for verifying the correct key is associated
+                    with your GitHub account.
+                </p>
+            </li>
+            <li>
+                <h2>To check the status of your Git repository:</h2>
+                <code>git status</code>
+                <p>
+                    Running this command within a Git repository will display
+                    information about modified, added, and deleted files, as
+                    well as the current branch.
+                </p>
+            </li>
+            <li>
+                <h2>To display the commit history:</h2>
+                <code>git log</code>
+                <p>
+                    This command will show a list of commits in the repository,
+                    including the commit message, author, date, and commit hash.
+                </p>
+            </li>
+            <li>
+                <h2>
+                    To display the remote repositories (such as GitHub)
+                    configured for your repository:
+                </h2>
+                <code>git remote -v</code>
+                <p>
+                    Running this command will list the remote repositories and
+                    their associated URLs.
+                </p>
+            </li>
+        </ul>
+        <p>Additionally, here are a few more commonly used Git commands:</p>
+        <ul>
+            <li>
+                <h3>Stage changes for commit:</h3>
+                <code>git add</code>
+            </li>
+            <li>
+                <h3>Create a new commit with the staged changes:</h3>
+                <code>git commit</code>
+            </li>
+            <li>
+                <h3>Push commits to a remote repository:</h3>
+                <code>git push</code>
+            </li>
+            <li>
+                <h3>Fetch and merge changes from a remote repository:</h3>
+                <code>git pull</code>
+            </li>
+            <li>
+                <h3>List, create, or delete branches:</h3>
+                <code>git branch</code>
+            </li>
+            <li>
+                <h3>Switch branches or restore files from a commit:</h3>
+                <code>git checkout</code>
+            </li>
+            <li>
+                <h3>Merge changes from one branch into another:</h3>
+                <code>git merge</code>
+            </li>
+            <li>
+                <h3>Create a local copy of a remote repository:</h3>
+                <code>git clone</code>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript: Generate Unique ID</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h2,
+            .cs-title {
+                font-size: 1.25rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h3,
+            .cs-section {
+                font-size: 1rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            h4,
+            .cs-sub-section {
+                font-size: 1rem;
+                margin-bottom: 1em;
+                font-weight: bold;
+            }
+
+            li {
+                margin-bottom: 1em;
+                /* list-style: inside; */
+            }
+
+            p {
+                margin-bottom: 0.5em;
+            }
+
+            strong {
+                font-weight: 700;
+            }
+
+            code {
+                margin: 0.5em;
+                display: block;
+                font-family: "Courier New", Courier, monospace;
+                font-weight: 100;
+                background-color: #f5f5f5;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>JavaScript: Generate Unique ID</h2>
+        <p>
+            There are several approaches you can take to generate unique IDs for
+            your app elements. Here's a breakdown:
+        </p>
+        <h3>Firestore's Built-in IDs:</h3>
+        <p>
+            Firestore itself can generate unique IDs when you create a document
+            without specifying an ID. These IDs are longer than 10 characters
+            but are guaranteed to be unique within a collection.
+        </p>
+        <code>
+            let newDocRef = db.collection('customers').doc(); <br />
+            let uniqueID = newDocRef.id; // This gives you a unique ID generated
+            by Firestore
+        </code>
+        <h3>Shortid Library:</h3>
+        <p>
+            Shortid is a popular library that creates amazingly short
+            non-sequential URL-friendly unique IDs. Perfect for URL slugs,
+            MongoDB, and Redis keys, among others.
+        </p>
+        <p>Installation:</p>
+        <code> npm install shortid</code>
+        <p>Usage:</p>
+        <code>
+            const shortid = require('shortid'); <br />
+            console.log(shortid.generate()); // Produces a short unique ID
+        </code>
+        <h3>Nano ID:</h3>
+        <p>
+            Nano ID is another library that is a size-efficient URL-friendly
+            unique string ID generator.
+        </p>
+        <p>Installation:</p>
+        <code> npm install nanoid </code>
+        <p>Usage:</p>
+        <code>
+            const { nanoid } = require('nanoid'); <br />
+            const id = nanoid(10); // Produces a 10-character unique ID
+        </code>
+        <h3>UUID:</h3>
+        <p>
+            UUID library assists to generate long unique IDs in a format of
+            "a449e3ec-a602-4020-abeb-91f680a0128d", that might work for as a
+            strong password for majority of applications.
+        </p>
+        <p>Installation:</p>
+        <code>npm install uuid</code>
+        <p>Usage:</p>
+        <code>
+            import { v4 as uuidv4 } from "uuid";<br />
+            uuidv4();
+        </code>
+        <h3>Custom Function:</h3>
+        <p>If you want to roll out your own function, here's a simple one:</p>
+        <code>
+            function generateUID(length) { <br />
+            return [...Array(length)].map(() => (~~(Math.random() *
+            36)).toString(36)).join(''); <br />
+            } console.log(generateUID(10)); // Produces a 10-character unique ID
+        </code>
+        <p>
+            This function generates an ID of a given length using numbers and
+            lowercase letters.
+        </p>
+    </body>
+</html>

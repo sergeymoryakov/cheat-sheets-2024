@@ -1,0 +1,17 @@
+Create new project:
+
+`npm create vite@latest my-app -- --template react-ts`
+
+Install GitHub Pages:
+`npm install gh-pages --save-dev`
+
+Add base to vite.config.ts file:
+    base: "/my-app/",
+
+Add homepage to package.json:
+    "homepage": "https://github.com/sergeymoryakov/my-app.git",
+
+Add a few scripts to package.json:
+        "start": "npm run dev",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
