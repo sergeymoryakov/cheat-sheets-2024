@@ -1,3 +1,3 @@
 # Web Developer's Cheat Sheets 2024
 
-With React, TypeScript, and Vite
+With Vite, React, TypeScript, and Material UI library.

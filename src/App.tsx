@@ -1,59 +1,58 @@
-import { Article, articles } from "./articles";
-// import "./App.css";
-import "./styles/reset.css";
-import "./styles/style.css";
-import "./styles/style-text.css";
+import { useState } from "react";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import List from "@mui/material/List";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 
-type TitleItemProps = {
-    itemTitle: string;
-};
-
-type TitleListProps = {
-    articles: Article[];
-};
-
-function TitleItem({ itemTitle }: TitleItemProps) {
-    return (
-        <li className="list-item">
-            <button className="list-item-btn">{itemTitle}</button>
-        </li>
-    );
-}
-
-function TitlesList({ articles }: TitleListProps) {
-    return (
-        <ul id="csList" className="cs-list">
-            {articles.map((article) => (
-                <TitleItem key={article.id} itemTitle={article.title} />
-            ))}
-            {/* Error in rendering list of Cheat Sheets */}
-        </ul>
-    );
-}
+import { articles, Article } from "./articles";
+import TransitionsModal from "./Components/TransitionsModal";
 
 function App() {
+    const [isModalOpen, setModalOpen] = useState(false);
+    const [selectedArticle, setSelectedArticle] = useState<Article | null>(
+        null
+    );
+
+    function openModal(article: Article) {
+        console.log("clicked button: ", article.title);
+        setSelectedArticle(article);
+        setModalOpen(true);
+    }
+
     return (
         <>
-            <div className="container">
-                <h1>WebDev Cheat Sheets</h1>
-                <TitlesList articles={articles} />
-            </div>
-            {/* 
-            <div id="csPopup" className="cs-popup">
-                <div id="csPopupContent" className="cs-popup-content">
-                    <div className="wrapper-btn" id="wrapperBtn">
-                        <button className="return-btn" id="returnBtn"></button>
-                        <button className="print-btn" id="printBtn"></button>
-                    </div>
-                    <span className="cs-popup-content_title" id="csTitle">
-                        Error printing title
-                    </span>
-                    <span className="cs-popup-content_body" id="csBody">
-                        Error printing body text
-                    </span>
-                </div>
-            </div> 
-            */}
+            <Paper
+                elevation={3}
+                sx={{
+                    margin: "auto",
+                    maxWidth: 1000,
+                }}
+            >
+                <Typography variant="h4" align="center">
+                    WebDev Cheat Sheets
+                </Typography>
+                <List>
+                    {articles.map((article) => (
+                        <ListItemButton
+                            key={article.id}
+                            onClick={() => {
+                                openModal(article);
+                            }}
+                        >
+                            <ListItemText primary={article.title} />
+                        </ListItemButton>
+                    ))}
+                    {/* Error in rendering list of Cheat Sheets */}
+                </List>
+            </Paper>
+            {selectedArticle && (
+                <TransitionsModal
+                    article={selectedArticle}
+                    open={isModalOpen}
+                    handleClose={() => setModalOpen(false)}
+                />
+            )}
         </>
     );
 }
