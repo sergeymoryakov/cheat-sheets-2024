@@ -1,4 +1,11 @@
-export const articles = [
+export interface Article {
+    title: string;
+    id: string;
+    tech: string;
+    body: string;
+}
+
+export const articles: Article[] = [
     {
         title: "Git: Configuration and SSH Key Setup",
         id: "0001",
