@@ -15,7 +15,6 @@ function App() {
     );
 
     function openModal(article: Article) {
-        console.log("clicked button: ", article.title);
         setSelectedArticle(article);
         setModalOpen(true);
     }
