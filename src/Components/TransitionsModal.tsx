@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
-import { Article } from "../articles";
+import { Article } from "../data/articles";
 
 const style = {
     position: "absolute",

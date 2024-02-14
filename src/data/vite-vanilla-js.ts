@@ -1,4 +1,10 @@
-    <h1>Vite: Creating a New Vite Vanilla Project</h1>
+export const article = {
+    title: "Vite: Creating a New Vite Vanilla Project",
+    id: "0102", // keep it 0101+
+    tech: "vite",
+    author: "",
+    source: "",
+    body: `
     <p>Open Terminal: Launch your command line interface.</p>
 
     <h3>Create the Project:</h3>
@@ -46,3 +52,5 @@
         <li>Utility Functions: If you have JavaScript functions that are used in multiple places, they can be organized under the utils folder.</li>
         <li>Main.js: This is the entry point of your application. It's where you can import your components and styles, and it's linked from your index.html.</li>
     </ul>
+    `,
+};

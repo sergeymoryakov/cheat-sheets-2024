@@ -5,8 +5,14 @@ import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 
-import { articles, Article } from "./articles";
+import { articles, Article } from "./data/articles";
+import { article } from "./data/readme";
+import { article as article2 } from "./data/vite-vanilla-js";
+
 import TransitionsModal from "./Components/TransitionsModal";
+
+articles.push(article);
+articles.push(article2);
 
 function App() {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -32,16 +38,18 @@ function App() {
                     WebDev Cheat Sheets
                 </Typography>
                 <List>
-                    {articles.map((article) => (
-                        <ListItemButton
-                            key={article.id}
-                            onClick={() => {
-                                openModal(article);
-                            }}
-                        >
-                            <ListItemText primary={article.title} />
-                        </ListItemButton>
-                    ))}
+                    {articles
+                        .sort((a, b) => a.title.localeCompare(b.title))
+                        .map((article) => (
+                            <ListItemButton
+                                key={article.id}
+                                onClick={() => {
+                                    openModal(article);
+                                }}
+                            >
+                                <ListItemText primary={article.title} />
+                            </ListItemButton>
+                        ))}
                     {/* Error in rendering list of Cheat Sheets */}
                 </List>
             </Paper>

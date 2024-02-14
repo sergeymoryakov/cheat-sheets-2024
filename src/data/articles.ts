@@ -2,6 +2,8 @@ export interface Article {
     title: string;
     id: string;
     tech: string;
+    author: string | undefined;
+    source: string | undefined;
     body: string;
 }
 
@@ -10,6 +12,8 @@ export const articles: Article[] = [
         title: "Git: Configuration and SSH Key Setup",
         id: "0001",
         tech: "Git",
+        author: "",
+        source: "",
         body: `
             <ol>
                 <li>
@@ -92,6 +96,8 @@ export const articles: Article[] = [
         title: "Git: Useful Commands",
         id: "0002",
         tech: "Git",
+        author: "",
+        source: "",
         body: `
             <ul>
                 <li>
@@ -190,6 +196,8 @@ export const articles: Article[] = [
         title: "General: Code Types",
         id: "0003",
         tech: "General",
+        author: "",
+        source: "",
         body: `
         <ul>
             <li>
@@ -235,6 +243,8 @@ export const articles: Article[] = [
         title: "General: Code Refactoring",
         id: "0004",
         tech: "General",
+        author: "",
+        source: "",
         body: `
         <p>
             Here's a general approach to refactoring for readability and
@@ -390,6 +400,8 @@ export const articles: Article[] = [
         title: "General: Error Handling",
         id: "0005",
         tech: "General",
+        author: "",
+        source: "",
         body: `
         <p>
             Proper error handling is crucial to ensure that your application
@@ -460,6 +472,8 @@ export const articles: Article[] = [
         title: "JavaScript: Function Types",
         id: "0006",
         tech: "JavaScript",
+        author: "",
+        source: "",
         body: `
         <p>
             In JavaScript, functions are blocks of code that can be defined and
@@ -639,6 +653,8 @@ export const articles: Article[] = [
         title: "JavaScript: Functions IIFE",
         id: "0007",
         tech: "JavaScript",
+        author: "",
+        source: "",
         body: `
         <p>
             An Immediately Invoked Function Expression (IIFE, pronounced as
@@ -709,6 +725,8 @@ export const articles: Article[] = [
         title: "JavaScript: Generate Unique ID",
         id: "0008",
         tech: "JavaScript",
+        author: "",
+        source: "",
         body: `
         <p>
             There are several approaches you can take to generate unique IDs for
@@ -781,6 +799,8 @@ export const articles: Article[] = [
         title: "Node.js: Installation (macOS)",
         id: "0009",
         tech: "Node.js",
+        author: "",
+        source: "",
         body: `
         <p>
             Visit the official Node.js website at
@@ -832,6 +852,8 @@ export const articles: Article[] = [
         title: "Node.js: Installation (Windows)",
         id: "0010",
         tech: "Node.js",
+        author: "",
+        source: "",
         body: `
         <p>
             Visit the official Node.js website at
@@ -889,6 +911,8 @@ export const articles: Article[] = [
         title: "Parcel: Installing and Running Parcel in Project Directory",
         id: "0011",
         tech: "Parcel",
+        author: "",
+        source: "",
         body: `
             <ol>
                 <li>
@@ -971,6 +995,8 @@ export const articles: Article[] = [
         title: "Parcel: Installing and Running Parcel (ver 2)",
         id: "0012",
         tech: "Parcel",
+        author: "",
+        source: "",
         body: `
             <ol>
                 <li>
@@ -1084,6 +1110,8 @@ export const articles: Article[] = [
         title: "Parcel: Reset",
         id: "0013",
         tech: "Parcel",
+        author: "",
+        source: "",
         body: `
         <p>
             You can manually delete the .parcel-cache folder in your project
@@ -1124,6 +1152,8 @@ export const articles: Article[] = [
     //     title: "",
     //     id: "",
     //     tech: "",
+    //     author: "",
+    //     source: "",
     //     body: `
     //     `,
     // },
@@ -1131,6 +1161,8 @@ export const articles: Article[] = [
     //     title: "",
     //     id: "",
     //     tech: "",
+    //     author: "",
+    //     source: "",
     //     body: `
     //     `,
     // },
@@ -1138,6 +1170,8 @@ export const articles: Article[] = [
         title: "VS Code: Installation",
         id: "0020",
         tech: "VS Code",
+        author: "",
+        source: "",
         body: `
         <ol>
           <li>
