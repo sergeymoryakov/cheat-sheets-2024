@@ -5,14 +5,12 @@ import List from "@mui/material/List";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 
-import { articles, Article } from "./data/articles";
-import { article } from "./data/readme";
-import { article as article2 } from "./data/vite-vanilla-js";
+import { Article } from "./data/articles";
 
+import { getArticles } from "./api/getArticles";
 import TransitionsModal from "./Components/TransitionsModal";
 
-articles.push(article);
-articles.push(article2);
+const articles: Article[] = getArticles();
 
 function App() {
     const [isModalOpen, setModalOpen] = useState(false);

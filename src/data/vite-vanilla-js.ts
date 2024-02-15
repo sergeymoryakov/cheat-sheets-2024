@@ -1,5 +1,5 @@
 export const article = {
-    title: "Vite: Creating a New Vite Vanilla Project",
+    title: "Vite: Create a New Vite Vanilla Project",
     id: "0102", // keep it 0101+
     tech: "vite",
     author: "",
