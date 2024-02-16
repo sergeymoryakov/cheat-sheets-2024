@@ -1,9 +1,11 @@
 import { useState } from "react";
-import Paper from "@mui/material/Paper";
+
+import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
-import List from "@mui/material/List";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
+
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import Box from "@mui/material/Box";
 
 import { Article } from "./data/articles";
 
@@ -27,32 +29,47 @@ function App() {
 
     return (
         <>
-            <Paper
-                elevation={3}
+            <CssBaseline />
+            <Typography
+                variant="h4"
+                align="center"
                 sx={{
-                    margin: "auto",
-                    maxWidth: 1000,
+                    marginTop: "2rem",
                 }}
             >
-                <Typography variant="h4" align="center">
-                    WebDev Cheat Sheets
-                </Typography>
-                <List>
+                WebDev Cheat Sheets
+            </Typography>
+            <Box
+                sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    "& > *": {
+                        m: 1,
+                    },
+                    color: "inherit",
+                }}
+            >
+                <ButtonGroup
+                    orientation="vertical"
+                    aria-label="Vertical button group"
+                    variant="text"
+                    color="inherit"
+                >
                     {articles
                         .sort((a, b) => a.title.localeCompare(b.title))
                         .map((article) => (
-                            <ListItemButton
+                            <Button
                                 key={article.id}
                                 onClick={() => {
                                     openModal(article);
                                 }}
                             >
-                                <ListItemText primary={article.title} />
-                            </ListItemButton>
+                                {article.title}
+                            </Button>
                         ))}
                     {/* Error in rendering list of Cheat Sheets */}
-                </List>
-            </Paper>
+                </ButtonGroup>
+            </Box>
             {selectedArticle && (
                 <TransitionsModal
                     article={selectedArticle}

@@ -52,14 +52,18 @@ function TransitionsModal({
                                 md: "70%",
                                 lg: "50%",
                             },
+                            padding: {
+                                xs: "1rem",
+                                md: "2rem",
+                            },
                             maxHeight: "90vh",
                             overflowY: "auto",
                         }}
                     >
                         <Typography
                             id="transition-modal-title"
-                            variant="h4"
-                            component="h4"
+                            variant="h5"
+                            // component="h4"
                             align="center"
                         >
                             {article.title}
