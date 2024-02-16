@@ -1,0 +1,93 @@
+<body>
+    <p>
+        Creating a new project directory on your local machine, initialize a
+        Vite project there, and then push it to GitHub to create a new
+        repository.
+    </p>
+
+    <p>Here's a step-by-step breakdown of how you could go about this:</p>
+    <ul>
+        <li>
+            <p>Create a New Project Directory:</p>
+            <p>Navigate to your master projects directory.</p>
+        </li>
+        <li><p>Create a new directory for your project.</p></li>
+
+        <li>
+            <p>Navigate into the new directory.</p>
+
+            <code>
+                cd path/to/your/projects/directory<br />
+                mkdir new-vite-project<br />
+                cd new-vite-project<br />
+            </code>
+        </li>
+
+        <li>
+            <p>Initialize a Vite Project:</p>
+            <p>
+                Run the command to create a new Vite project. For example, if
+                you're creating a React project:
+            </p>
+            <code>
+                npx create-vite new-vite-project --template react<br />
+                cd new-vite-project<br />
+            </code>
+        </li>
+
+        <li>
+            <p>Initialize a Git Repository:</p>
+            <p>Initialize a new Git repository in the project directory.</p>
+
+            <code>git init</code>
+        </li>
+
+        <li>
+            <p>Commit Your Project:</p>
+            <p>Add all the files to the Git staging area and commit them.</p>
+
+            <code>
+                git add .<br />
+                git commit -m "Initial commit"<br />
+            </code>
+        </li>
+
+        <li>
+            <p>Create a New GitHub Repository:</p>
+
+            <p>
+                Go to GitHub and create a new repository. You don't need to
+                initialize it with a README, .gitignore, or license; your local
+                repository already has these files.
+            </p>
+        </li>
+
+        <li>
+            <p>Push Your Local Repository to GitHub:</p>
+
+            <p>Copy the URL of the new GitHub repository.</p>
+            <p>Back in your terminal, add the GitHub repository as a remote.</p>
+
+            <code
+                >git remote add origin
+                https://github.com/your-username/new-repository.git</code
+            >
+
+            <p>Push your local repository to GitHub.</p>
+
+            <code>git push -u origin master</code>
+        </li>
+    </ul>
+
+    <p>
+        Now, your local Vite project is on GitHub in a new repository, and you
+        can continue development both locally and collaboratively with others on
+        GitHub.
+    </p>
+
+    <p>
+        This workflow is quite flexible and allows you to set up your project
+        locally before pushing it to GitHub, without the need to create a GitHub
+        repository first and clone it to your local machine.
+    </p>
+</body>

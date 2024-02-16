@@ -58,8 +58,9 @@ function TransitionsModal({
                     >
                         <Typography
                             id="transition-modal-title"
-                            variant="h6"
-                            component="h2"
+                            variant="h4"
+                            component="h4"
+                            align="center"
                         >
                             {article.title}
                         </Typography>

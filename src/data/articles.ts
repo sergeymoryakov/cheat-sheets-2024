@@ -17,7 +17,7 @@ export const articles: Article[] = [
         body: `
             <ol>
                 <li>
-                    <h2>Configuring Git</h2>
+                    <p>Configuring Git</p>
                     <ul>
                         <li>Open a command prompt or terminal on your computer.</li>
                         <li>
@@ -41,7 +41,7 @@ export const articles: Article[] = [
                     </ul>
                 </li>
                 <li>
-                    <h2>Setting up an SSH key</h2>
+                    <p>Setting up an SSH key</p>
                     <ul>
                         <li>Open a command prompt or terminal on your computer.</li>
                         <li>
@@ -101,22 +101,22 @@ export const articles: Article[] = [
         body: `
             <ul>
                 <li>
-                    <h2>To display your Git configurations (name and email):</h2>
+                    <p>To display your Git configurations (name and email):</p>
                     <code>git config --global --list</code>
                     <p>This command will list all the global configurations set in Git.</p>
                 </li>
                 <li>
-                    <h2>To display your Git username:</h2>
+                    <p>To display your Git username:</p>
                     <code>git config user.name</code>
                     <p>Running this command will show your configured username.</p>
                 </li>
                 <li>
-                    <h2>To display your Git email:</h2>
+                    <p>To display your Git email:</p>
                     <code>git config user.email</code>
                     <p>This command will display the email address you've configured.</p>
                 </li>
                 <li>
-                    <h2>To display your SSH key fingerprint:</h2>
+                    <p>To display your SSH key fingerprint:</p>
                     <code>ssh-keygen -lf ~/.ssh/id_rsa.pub</code>
                     <p>
                         This command will show the fingerprint of your SSH key. It can be
@@ -125,7 +125,7 @@ export const articles: Article[] = [
                     </p>
                 </li>
                 <li>
-                    <h2>To check the status of your Git repository:</h2>
+                    <p>To check the status of your Git repository:</p>
                     <code>git status</code>
                     <p>
                         Running this command within a Git repository will display
@@ -134,7 +134,7 @@ export const articles: Article[] = [
                     </p>
                 </li>
                 <li>
-                    <h2>To display the commit history:</h2>
+                    <p>To display the commit history:</p>
                     <code>git log</code>
                     <p>
                         This command will show a list of commits in the repository,
@@ -142,10 +142,10 @@ export const articles: Article[] = [
                     </p>
                 </li>
                 <li>
-                    <h2>
+                    <p>
                         To display the remote repositories (such as GitHub) configured for
                         your repository:
-                    </h2>
+                    </p>
                     <code>git remote -v</code>
                     <p>
                         Running this command will list the remote repositories and their
@@ -158,35 +158,35 @@ export const articles: Article[] = [
             </p>
             <ul>
                 <li>
-                    <h3>Stage changes for commit:</h3>
+                    <p>Stage changes for commit:</p>
                     <code>git add</code>
                 </li>
                 <li>
-                    <h3>Create a new commit with the staged changes:</h3>
+                    <p>Create a new commit with the staged changes:</p>
                     <code>git commit</code>
                 </li>
                 <li>
-                    <h3>Push commits to a remote repository:</h3>
+                    <p>Push commits to a remote repository:</p>
                     <code>git push</code>
                 </li>
                 <li>
-                    <h3>Fetch and merge changes from a remote repository:</h3>
+                    <p>Fetch and merge changes from a remote repository:</p>
                     <code>git pull</code>
                 </li>
                 <li>
-                    <h3>List, create, or delete branches:</h3>
+                    <p>List, create, or delete branches:</p>
                     <code>git branch</code>
                 </li>
                 <li>
-                    <h3>Switch branches or restore files from a commit:</h3>
+                    <p>Switch branches or restore files from a commit:</p>
                     <code>git checkout</code>
                 </li>
                 <li>
-                    <h3>Merge changes from one branch into another:</h3>
+                    <p>Merge changes from one branch into another:</p>
                     <code>git merge</code>
                 </li>
                 <li>
-                    <h3>Create a local copy of a remote repository:</h3>
+                    <p>Create a local copy of a remote repository:</p>
                     <code>git clone</code>
                 </li>
             </ul>
@@ -292,7 +292,7 @@ export const articles: Article[] = [
 
         <ol>
             <li>
-                <h3>Modularize the Code:</h3>
+                <p>Modularize the Code:</p>
                 <ul>
                     <li>
                         Group related functions together. For instance, all
@@ -306,7 +306,7 @@ export const articles: Article[] = [
                 </ul>
             </li>
             <li>
-                <h3>Use Descriptive Variable and Function Names:</h3>
+                <p>Use Descriptive Variable and Function Names:</p>
                 <ul>
                     <li>
                         Most of your variable names are descriptive, but ensure
@@ -317,7 +317,7 @@ export const articles: Article[] = [
                 </ul>
             </li>
             <li>
-                <h3>Avoid Magic Values:</h3>
+                <p>Avoid Magic Values:</p>
                 <ul>
                     <li>
                         For strings or values that are used multiple times,
@@ -328,7 +328,7 @@ export const articles: Article[] = [
                 </ul>
             </li>
             <li>
-                <h3>Comments and Documentation:</h3>
+                <p>Comments and Documentation:</p>
                 <ul>
                     <li>
                         You've done a good job commenting the different sections
@@ -339,7 +339,7 @@ export const articles: Article[] = [
                 </ul>
             </li>
             <li>
-                <h3>Consistent Formatting:</h3>
+                <p>Consistent Formatting:</p>
                 <ul>
                     <li>
                         Ensure consistent use of spaces, indentation, and
@@ -349,7 +349,7 @@ export const articles: Article[] = [
                 </ul>
             </li>
             <li>
-                <h3>Error Handling:</h3>
+                <p>Error Handling:</p>
                 <ul>
                     <li>
                         You've incorporated error handling for Firestore
@@ -360,7 +360,7 @@ export const articles: Article[] = [
                 </ul>
             </li>
             <li>
-                <h3>Optimize for Performance:</h3>
+                <p>Optimize for Performance:</p>
                 <ul>
                     <li>
                         If there are repetitive DOM lookups, consider caching
@@ -374,7 +374,7 @@ export const articles: Article[] = [
                 </ul>
             </li>
             <li>
-                <h3>Additional Suggestions:</h3>
+                <p>Additional Suggestions:</p>
                 <ul>
                     <li>
                         Event Delegation: Instead of attaching event listeners
@@ -412,7 +412,7 @@ export const articles: Article[] = [
             Here are some specific areas in your code that could benefit from
             improved error handling:
         </p>
-        <h3>DOM Element References:</h3>
+        <p>DOM Element References:</p>
         <p>
             When querying for DOM elements, there's a chance that an element
             might not be found (e.g., if there's a typo in the ID or class name,
@@ -425,11 +425,13 @@ export const articles: Article[] = [
             Before using newItemInputNode, you might want to check if it's not
             null:
             <code>
-                if (!newItemInputNode) { console.error("Couldn't find the input
-                element with ID 'newItemInput'"); return; }
+                if (!newItemInputNode) {<br>
+                    console.error("Couldn't find the input element with ID 'newItemInput'");<br>
+                    return;<br>
+            }
             </code>
         </p>
-        <h3>Event Handlers:</h3>
+        <p>Event Handlers:</p>
         <p>
             Event handlers can sometimes be sources of unexpected behavior,
             especially when making assumptions about the event object or the
@@ -437,30 +439,33 @@ export const articles: Article[] = [
             handlers in try/catch to capture any unforeseen issues:
         </p>
         <code>
-            function handleSomeEvent(event) { try { // ... event handling logic
-            } catch (error) { console.error("Error handling the event:", error);
-            } }
+            function handleSomeEvent(event) {<br>
+                try { // ... event handling logic<br>
+                } catch (error) {<br>
+                    console.error("Error handling the event:", error);<br>
+                }<br>
+            }
         </code>
-        <h3>Array or Object Manipulations:</h3>
+        <p>Array or Object Manipulations:</p>
         <p>
             When accessing properties on objects or manipulating arrays, ensure
             you check for existence or length before proceeding. For instance,
             before accessing someArray[0], you might check if someArray.length >
             0.
         </p>
-        <h3>Feedback to Users:</h3>
+        <p>Feedback to Users:</p>
         <p>
             While logging errors to the console is useful during development,
             end users will likely not check the console. Consider providing
             feedback to users when errors occur, either via alerts, UI
             notifications, or other visual cues.
         </p>
-        <h3>External Libraries or APIs:</h3>
+        <p>External Libraries or APIs:</p>
         <p>
             If you integrate external libraries or APIs in the future, ensure
             you handle potential failures or inconsistencies in their behavior.
         </p>
-        <h3>Asynchronous Operations:</h3>
+        <p>Asynchronous Operations:</p>
         <p>
             For asynchronous operations, especially promises, ensure you handle
             both the success and failure cases. The .catch() method on promises
@@ -481,7 +486,7 @@ export const articles: Article[] = [
             or calculations and are an essential part of the language. The
             syntax of JavaScript functions consists of three main parts:
         </p>
-        <h3>Function Declaration:</h3>
+        <p>Function Declaration:</p>
         <p>
             The most common and traditional way to define a function is using
             the function declaration. It has the following syntax:
@@ -500,7 +505,7 @@ export const articles: Article[] = [
             return a + b;<br />
             }</code
         >
-        <h3>Function Expression:</h3>
+        <p>Function Expression:</p>
         <p>
             In JavaScript, functions are also treated as first-class objects,
             which means they can be assigned to variables. This is known as a
@@ -518,7 +523,7 @@ export const articles: Article[] = [
             return a - b;<br />
             };<br />
         </code>
-        <h3>Arrow Function Expression:</h3>
+        <p>Arrow Function Expression:</p>
         <p>
             Introduced in ECMAScript 6 (ES6), arrow functions provide a more
             concise syntax for defining functions, especially when the function
@@ -538,7 +543,7 @@ export const articles: Article[] = [
             return a \* b;<br />
             };<br />
         </code>
-        <h3>Differences between these three methods:</h3>
+        <p>Differences between these three methods:</p>
         <strong>Hoisting:</strong>
         <p>
             Function declarations are hoisted, meaning you can call them before
@@ -571,12 +576,12 @@ export const articles: Article[] = [
             you need to pass functions as arguments to other functions (e.g., in
             higher-order functions).
         </p>
-        <h3>Differences:</h3>
+        <p>Differences:</p>
         <p>
             The main difference lies in when you define the function in your
             code:
         </p>
-        <h3>Function Declaration:</h3>
+        <p>Function Declaration:</p>
         <p>
             Function declarations are hoisted, which means they are available
             throughout the scope they are defined in, even before the actual
@@ -598,7 +603,7 @@ export const articles: Article[] = [
             return a + b;<br />
             }
         </code>
-        <h3>Function Expression:</h3>
+        <p>Function Expression:</p>
         <p>
             Function expressions are not hoisted, so you need to define them
             before calling them.
@@ -622,7 +627,7 @@ export const articles: Article[] = [
             To avoid errors with function expressions, make sure you define the
             function before you attempt to call it.
         </p>
-        <h3>Arrow Function Expression:</h3>
+        <p>Arrow Function Expression:</p>
         <p>
             Like function expressions, arrow functions are also not hoisted, so
             they should be defined before calling.
@@ -732,7 +737,7 @@ export const articles: Article[] = [
             There are several approaches you can take to generate unique IDs for
             your app elements. Here's a breakdown:
         </p>
-        <h3>Firestore's Built-in IDs:</h3>
+        <p>Firestore's Built-in IDs:</p>
         <p>
             Firestore itself can generate unique IDs when you create a document
             without specifying an ID. These IDs are longer than 10 characters
@@ -743,7 +748,7 @@ export const articles: Article[] = [
             let uniqueID = newDocRef.id; // This gives you a unique ID generated
             by Firestore
         </code>
-        <h3>Shortid Library:</h3>
+        <p>Shortid Library:</p>
         <p>
             Shortid is a popular library that creates amazingly short
             non-sequential URL-friendly unique IDs. Perfect for URL slugs,
@@ -756,7 +761,7 @@ export const articles: Article[] = [
             const shortid = require('shortid'); <br />
             console.log(shortid.generate()); // Produces a short unique ID
         </code>
-        <h3>Nano ID:</h3>
+        <p>Nano ID:</p>
         <p>
             Nano ID is another library that is a size-efficient URL-friendly
             unique string ID generator.
@@ -768,7 +773,7 @@ export const articles: Article[] = [
             const { nanoid } = require('nanoid'); <br />
             const id = nanoid(10); // Produces a 10-character unique ID
         </code>
-        <h3>UUID:</h3>
+        <p>UUID:</p>
         <p>
             UUID library assists to generate long unique IDs in a format of
             "a449e3ec-a602-4020-abeb-91f680a0128d", that might work for as a
@@ -781,7 +786,7 @@ export const articles: Article[] = [
             import { v4 as uuidv4 } from "uuid";<br />
             uuidv4();
         </code>
-        <h3>Custom Function:</h3>
+        <p>Custom Function:</p>
         <p>If you want to roll out your own function, here's a simple one:</p>
         <code>
             function generateUID(length) { <br />

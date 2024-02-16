@@ -10,6 +10,8 @@ import { Article } from "./data/articles";
 import { getArticles } from "./api/getArticles";
 import TransitionsModal from "./Components/TransitionsModal";
 
+import "./styles/demo.css";
+
 const articles: Article[] = getArticles();
 
 function App() {

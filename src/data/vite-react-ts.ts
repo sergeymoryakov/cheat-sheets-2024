@@ -7,35 +7,35 @@ export const article = {
     body: `
     <p>Open Terminal: Launch your command line interface.</p>
 
-    <h3>Create new Project:</h3>
+    <p>Create new Project:</p>
     <p>Use the Vite command to create a new project. Replace <i>my-app</i> with your desired project name.</p>
-    <div class="code-block">npm create vite@latest my-app -- --template react-ts</div>
+    <code>npm create vite@latest my-app -- --template react-ts</code>
 
-    <h3>Navigate to the Project Directory:</h3>
-    <div class="code-block">cd my-app</div>
+    <p>Navigate to the Project Directory:</p>
+    <code>cd my-app</code>
 
-    <h3>Install Dependencies:</h3>
-    <div class="code-block">npm install</div>
+    <p>Install Dependencies:</p>
+    <code>npm install</code>
 
-    <h3>Install GitHub Pages:</h3>
-    <div class="code-block">npm install gh-pages --save-dev</div>
+    <p>Install GitHub Pages:</p>
+    <code>npm install gh-pages --save-dev</code>
 
-    <h3>Add base to vite.config.ts file:</h3>
-    <div class="code-block">base: "/my-app/",</div>
+    <p>Add base to vite.config.ts file:</p>
+    <code>base: "/my-app/",</code>
 
-    <h3>Add homepage to package.json:</h3>
-    <div class="code-block">"homepage": "https://github.com/sergeymoryakov/my-app.git",</div>
+    <p>Add homepage to package.json:</p>
+    <code>"homepage": "https://github.com/sergeymoryakov/my-app.git",</code>
 
-    <h3>Add a few scripts to package.json:</h3>
-    <div class="code-block">        "start": "npm run dev",
+    <p>Add a few scripts to package.json:</p>
+    <code>        "start": "npm run dev",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"</div>
+        "deploy": "gh-pages -d dist"</code>
 
-    <h3>Start the Development Server:</h3>
-    <div class="code-block">npm start</div>
+    <p>Start the Development Server:</p>
+    <code>npm start</code>
 
-    <h3>Deploy project to gh-pages:</h3>
-    <div class="code-block">npm run deploy</div>
+    <p>Deploy project to gh-pages:</p>
+    <code>npm run deploy</code>
 
     `,
 };
